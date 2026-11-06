@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0B0F19"/>
+  <rect width="64" height="64" rx="14" fill="none" stroke="#06B6D4" stroke-width="2"/>
+  <!-- M letter -->
+  <text x="10" y="46" font-family="JetBrains Mono, monospace" font-size="38" font-weight="700" fill="#06B6D4">m</text>
+  <!-- Version dot decoration -->
+  <circle cx="54" cy="12" r="5" fill="#06B6D4" opacity="0.8"/>
+</svg>
+
