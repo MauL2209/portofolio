@@ -50,17 +50,23 @@
       <!-- Desktop Nav -->
       <nav class="navbar__menu" id="navMenu" aria-label="Navigasi utama">
         <ul class="navbar__list">
-          <li><a href="#tentang" class="navbar__link" data-section="tentang">Tentang</a></li>
-          <li><a href="#keahlian" class="navbar__link" data-section="keahlian">Keahlian</a></li>
-          <li><a href="#project" class="navbar__link" data-section="project">Project</a></li>
-          <li><a href="#riwayat" class="navbar__link" data-section="riwayat">Riwayat</a></li>
-          <li><a href="#kontak" class="navbar__link" data-section="kontak">Kontak</a></li>
+          <li><a href="#tentang" class="navbar__link" data-section="tentang" data-i18n="nav.tentang">Tentang</a></li>
+          <li><a href="#keahlian" class="navbar__link" data-section="keahlian" data-i18n="nav.keahlian">Keahlian</a></li>
+          <li><a href="#project" class="navbar__link" data-section="project" data-i18n="nav.project">Project</a></li>
+          <li><a href="#riwayat" class="navbar__link" data-section="riwayat" data-i18n="nav.riwayat">Riwayat</a></li>
+          <li><a href="#kontak" class="navbar__link" data-section="kontak" data-i18n="nav.kontak">Kontak</a></li>
         </ul>
       </nav>
 
       <!-- CTA + Hamburger -->
       <div class="navbar__actions">
-        <a href="#kontak" class="btn btn--primary btn--sm">Hubungi Saya</a>
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Aktifkan Light Mode" aria-pressed="false" title="Toggle tema">
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+        <!-- Language Toggle -->
+        <button class="lang-toggle" id="langToggle" aria-label="Switch to English" lang="en">EN</button>
+        <a href="#kontak" class="btn btn--primary btn--sm" data-i18n="nav.cta">Hubungi Saya</a>
         <button class="hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false"
           aria-controls="navMenu">
           <span class="hamburger__bar"></span>
@@ -75,12 +81,12 @@
   <!-- Mobile Nav Overlay -->
   <div class="mobile-nav" id="mobileNav" aria-hidden="true">
     <ul class="mobile-nav__list">
-      <li><a href="#tentang" class="mobile-nav__link">Tentang</a></li>
-      <li><a href="#keahlian" class="mobile-nav__link">Keahlian</a></li>
-      <li><a href="#project" class="mobile-nav__link">Project</a></li>
-      <li><a href="#riwayat" class="mobile-nav__link">Riwayat</a></li>
-      <li><a href="#kontak" class="mobile-nav__link">Kontak</a></li>
-      <li><a href="#kontak" class="btn btn--primary mobile-nav__cta">Hubungi Saya</a></li>
+      <li><a href="#tentang" class="mobile-nav__link"><span data-i18n="nav.tentang">Tentang</span></a></li>
+      <li><a href="#keahlian" class="mobile-nav__link"><span data-i18n="nav.keahlian">Keahlian</span></a></li>
+      <li><a href="#project" class="mobile-nav__link"><span data-i18n="nav.project">Project</span></a></li>
+      <li><a href="#riwayat" class="mobile-nav__link"><span data-i18n="nav.riwayat">Riwayat</span></a></li>
+      <li><a href="#kontak" class="mobile-nav__link"><span data-i18n="nav.kontak">Kontak</span></a></li>
+      <li><a href="#kontak" class="btn btn--primary mobile-nav__cta"><span data-i18n="nav.cta">Hubungi Saya</span></a></li>
     </ul>
   </div>
   <div class="mobile-nav__overlay" id="mobileOverlay"></div>
@@ -97,27 +103,23 @@
         <div class="hero__content animate-on-scroll">
           <span class="hero__badge">
             <i class="fa-solid fa-code" aria-hidden="true"></i>
-            RPL Student &amp; Junior Web Developer
+            <span data-i18n="hero.badge">RPL Student &amp; Junior Web Developer</span>
           </span>
 
           <h1 class="hero__title">
-            Hi, saya<br />
+            <span data-i18n="hero.title.line1">Hi, saya</span><br />
             <span class="text-cyan">Hafiizh Maulana</span>
           </h1>
 
-          <p class="hero__desc">
-            Saya adalah siswa Rekayasa Perangkat Lunak yang tertarik pada Web Development dan
-            Software Development. Saya senang membangun website yang modern, fungsional, dan
-            mudah digunakan.
-          </p>
+          <p class="hero__desc" data-i18n="hero.desc">Saya adalah siswa Rekayasa Perangkat Lunak yang tertarik pada Web Development dan Software Development. Saya senang membangun website yang modern, fungsional, dan mudah digunakan.</p>
 
           <div class="hero__actions">
             <a href="#project" class="btn btn--primary">
-              Lihat Project
+              <span data-i18n="hero.btn.project">Lihat Project</span>
             </a>
             <a href="#kontak" class="btn btn--outline">
               <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-              Hubungi Saya
+              <span data-i18n="hero.btn.contact">Hubungi Saya</span>
             </a>
           </div>
 
@@ -125,15 +127,15 @@
           <div class="hero__stats">
             <div class="stat-chip">
               <span class="stat-chip__number">4+</span>
-              <span class="stat-chip__label">Projects</span>
+              <span class="stat-chip__label"><span data-i18n="hero.stat.projects.label">Projects</span></span>
             </div>
             <div class="stat-chip">
               <span class="stat-chip__number">6+</span>
-              <span class="stat-chip__label">Tech Stack</span>
+              <span class="stat-chip__label"><span data-i18n="hero.stat.stack.label">Tech Stack</span></span>
             </div>
             <div class="stat-chip">
               <span class="stat-chip__number">2+</span>
-              <span class="stat-chip__label">Tahun Belajar</span>
+              <span class="stat-chip__label"><span data-i18n="hero.stat.years.label">Tahun Belajar</span></span>
             </div>
           </div>
         </div>
@@ -148,7 +150,7 @@
             <!-- Badge overlay -->
             <div class="photo-frame__badge">
               <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
-              RPL Student &amp; Junior Web Developer
+              <span data-i18n="hero.photo.badge">RPL Student &amp; Junior Web Developer</span>
             </div>
           </div>
 
@@ -171,9 +173,9 @@
     <section class="skills section" id="keahlian" aria-label="Keahlian">
       <div class="container">
         <div class="section-header animate-on-scroll">
-          <span class="section-eyebrow">My Arsenal</span>
-          <h2 class="section-title">Tech Stack &amp; Skills</h2>
-          <p class="section-desc">Teknologi dan tools yang saya gunakan untuk membangun aplikasi web.</p>
+          <span class="section-eyebrow"><span data-i18n="skills.eyebrow">My Arsenal</span></span>
+          <h2 class="section-title" data-i18n="skills.title">Tech Stack &amp; Skills</h2>
+          <p class="section-desc" data-i18n="skills.desc">Teknologi dan tools yang saya gunakan untuk membangun aplikasi web.</p>
         </div>
 
         <div class="skills__grid animate-on-scroll" style="--delay:.1s">
@@ -183,7 +185,7 @@
               <i class="fa-brands fa-php" aria-hidden="true"></i>
             </div>
             <span class="skill-card__name">PHP</span>
-            <span class="skill-card__level">Backend</span>
+            <span class="skill-card__level" data-i18n="skills.level.backend">Backend</span>
           </div>
 
           <div class="skill-card">
@@ -191,7 +193,7 @@
               <i class="fa-brands fa-laravel" aria-hidden="true"></i>
             </div>
             <span class="skill-card__name">Laravel</span>
-            <span class="skill-card__level">Framework</span>
+            <span class="skill-card__level" data-i18n="skills.level.framework">Framework</span>
           </div>
 
           <div class="skill-card">
@@ -199,7 +201,7 @@
               <i class="fa-solid fa-database" aria-hidden="true"></i>
             </div>
             <span class="skill-card__name">MySQL</span>
-            <span class="skill-card__level">Database</span>
+            <span class="skill-card__level" data-i18n="skills.level.database">Database</span>
           </div>
 
           <div class="skill-card">
@@ -207,7 +209,7 @@
               <i class="fa-brands fa-html5" aria-hidden="true"></i>
             </div>
             <span class="skill-card__name">HTML5</span>
-            <span class="skill-card__level">Markup</span>
+            <span class="skill-card__level" data-i18n="skills.level.markup">Markup</span>
           </div>
 
           <div class="skill-card">
@@ -215,7 +217,7 @@
               <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
             </div>
             <span class="skill-card__name">CSS3</span>
-            <span class="skill-card__level">Styling</span>
+            <span class="skill-card__level" data-i18n="skills.level.styling">Styling</span>
           </div>
 
           <div class="skill-card">
@@ -223,7 +225,7 @@
               <i class="fa-brands fa-js" aria-hidden="true"></i>
             </div>
             <span class="skill-card__name">JavaScript</span>
-            <span class="skill-card__level">Frontend</span>
+            <span class="skill-card__level" data-i18n="skills.level.frontend">Frontend</span>
           </div>
 
         </div>
@@ -238,9 +240,8 @@
       <div class="container">
         <div class="section-header animate-on-scroll">
           <span class="section-eyebrow">Portfolio</span>
-          <h2 class="section-title">Project Saya</h2>
-          <p class="section-desc">Beberapa project yang telah saya kerjakan dalam bidang pengembangan website dan sistem
-            informasi.</p>
+          <h2 class="section-title" data-i18n="projects.title">Project Saya</h2>
+          <p class="section-desc"><span data-i18n="projects.desc">Beberapa project yang telah saya kerjakan dalam bidang pengembangan website dan sistem informasi.</span></p>
         </div>
 
         <div class="projects__grid">
@@ -254,11 +255,8 @@
             </div>
             <div class="project-card__overlay" aria-hidden="true"></div>
             <div class="project-card__content">
-              <h3 class="project-card__title">Website Kantin Melati Area</h3>
-              <p class="project-card__desc">
-                Website kantin sekolah SMKN 20 Jakarta yang memiliki 8 stand dari berbagai jurusan.
-                Memungkinkan siswa melihat menu makanan &amp; minuman serta melakukan pemesanan/pre-order (PO).
-              </p>
+              <h3 class="project-card__title" data-i18n="projects.p1.title">Website Kantin Melati Area</h3>
+              <p class="project-card__desc" data-i18n="projects.p1.desc">Website kantin sekolah SMKN 20 Jakarta yang memiliki 8 stand dari berbagai jurusan. Memungkinkan siswa melihat menu makanan &amp; minuman serta melakukan pemesanan/pre-order (PO).</p>
               <div class="project-card__tags">
                 <span class="tag">PHP</span>
                 <span class="tag">Laravel</span>
@@ -283,11 +281,8 @@
             </div>
             <div class="project-card__overlay" aria-hidden="true"></div>
             <div class="project-card__content">
-              <h3 class="project-card__title">Galeri Sekolah</h3>
-              <p class="project-card__desc">
-                Website galeri sekolah yang menampilkan informasi dan data diri siswa dari 8 jurusan berbeda,
-                dengan minimal 10 data diri siswa sebagai data awal.
-              </p>
+              <h3 class="project-card__title" data-i18n="projects.p2.title">Galeri Sekolah</h3>
+              <p class="project-card__desc" data-i18n="projects.p2.desc">Website galeri sekolah yang menampilkan informasi dan data diri siswa dari 8 jurusan berbeda, dengan minimal 10 data diri siswa sebagai data awal.</p>
               <div class="project-card__tags">
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
@@ -312,11 +307,8 @@
             </div>
             <div class="project-card__overlay" aria-hidden="true"></div>
             <div class="project-card__content">
-              <h3 class="project-card__title">Majelis Sayur</h3>
-              <p class="project-card__desc">
-                Website sebagai wadah berkumpulnya para petani dari berbagai wilayah di Jagakarsa untuk berbagi
-                informasi, menjalin komunikasi, dan memperluas hubungan antarpetani.
-              </p>
+              <h3 class="project-card__title" data-i18n="projects.p3.title">Majelis Sayur</h3>
+              <p class="project-card__desc" data-i18n="projects.p3.desc">Website sebagai wadah berkumpulnya para petani dari berbagai wilayah di Jagakarsa untuk berbagi informasi, menjalin komunikasi, dan memperluas hubungan antarpetani.</p>
               <div class="project-card__tags">
                 <span class="tag">Laravel</span>
                 <span class="tag">MySQL</span>
@@ -340,11 +332,8 @@
             </div>
             <div class="project-card__overlay" aria-hidden="true"></div>
             <div class="project-card__content">
-              <h3 class="project-card__title">LinguaNova</h3>
-              <p class="project-card__desc">
-                Website pembelajaran bahasa asing: Inggris, Jepang, Korea, Mandarin/China, dan Spanyol.
-                Membantu pengguna mempelajari lima bahasa secara interaktif.
-              </p>
+              <h3 class="project-card__title" data-i18n="projects.p4.title">LinguaNova</h3>
+              <p class="project-card__desc" data-i18n="projects.p4.desc">Website pembelajaran bahasa asing: Inggris, Jepang, Korea, Mandarin/China, dan Spanyol. Membantu pengguna mempelajari lima bahasa secara interaktif.</p>
               <div class="project-card__tags">
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
@@ -365,7 +354,7 @@
         <!-- Placeholder notice -->
         <p class="projects__notice animate-on-scroll" style="--delay:.25s">
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-          Link GitHub akan diperbarui setelah project dipublikasikan ke repositori masing-masing.
+          <span data-i18n="projects.notice">Link GitHub akan diperbarui setelah project dipublikasikan ke repositori masing-masing.</span>
         </p>
       </div>
     </section>
@@ -377,10 +366,9 @@
     <section class="education section" id="riwayat" aria-label="Riwayat Pendidikan">
       <div class="container">
         <div class="section-header animate-on-scroll">
-          <span class="section-eyebrow">Education</span>
-          <h2 class="section-title">Riwayat Pendidikan</h2>
-          <p class="section-desc">Perjalanan pendidikan saya dalam mempelajari teknologi dan pengembangan perangkat
-            lunak.</p>
+          <span class="section-eyebrow" data-i18n="edu.eyebrow">Education</span>
+          <h2 class="section-title" data-i18n="edu.title">Riwayat Pendidikan</h2>
+          <p class="section-desc"><span data-i18n="edu.desc">Perjalanan pendidikan saya dalam mempelajari teknologi dan pengembangan perangkat lunak.</span></p>
         </div>
 
         <div class="timeline">
@@ -396,17 +384,16 @@
               <div class="timeline__line" aria-hidden="true"></div>
             </div>
             <div class="timeline__card">
-              <div class="timeline__period">2015 — 2021</div>
-              <h3 class="timeline__school">SDN Cipete Selatan 03 Pagi</h3>
-              <p class="timeline__level">Sekolah Dasar</p>
+              <div class="timeline__period" data-i18n="edu.sdn.period">2015 — 2021</div>
+              <h3 class="timeline__school" data-i18n="edu.sdn.name">SDN Cipete Selatan 03 Pagi</h3>
+              <p class="timeline__level" data-i18n="edu.sdn.level">Sekolah Dasar</p>
               <p class="timeline__detail">
-                Menempuh pendidikan dasar di SDN Cipete Selatan 03 Pagi, membangun
-                dasar-dasar akademik dan karakter sejak dini.
+                <span data-i18n="edu.sdn.detail">Menempuh pendidikan dasar di SDN Cipete Selatan 03 Pagi, membangun dasar-dasar akademik dan karakter sejak dini.</span>
               </p>
               <div class="timeline__footer">
                 <div class="timeline__badge">
                   <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
-                  Lulus
+                  <span data-i18n="edu.sdn.badge">Lulus</span>
                 </div>
                 <a href="https://maps.app.goo.gl/yjSufAtj69wZA2R96?g_st=ac"
                    target="_blank" rel="noopener noreferrer"
@@ -430,17 +417,16 @@
               <div class="timeline__line" aria-hidden="true"></div>
             </div>
             <div class="timeline__card">
-              <div class="timeline__period">2021 — 2024</div>
-              <h3 class="timeline__school">SMP YAPENKA</h3>
-              <p class="timeline__level">Sekolah Menengah Pertama</p>
+              <div class="timeline__period" data-i18n="edu.smp.period">2021 — 2024</div>
+              <h3 class="timeline__school" data-i18n="edu.smp.name">SMP YAPENKA</h3>
+              <p class="timeline__level" data-i18n="edu.smp.level">Sekolah Menengah Pertama</p>
               <p class="timeline__detail">
-                Menempuh pendidikan dasar menengah di SMP YAPENKA, membangun fondasi akademik sebelum
-                melanjutkan ke jenjang SMK dengan jurusan berbasis teknologi.
+                <span data-i18n="edu.smp.detail">Menempuh pendidikan dasar menengah di SMP YAPENKA, membangun fondasi akademik sebelum melanjutkan ke jenjang SMK dengan jurusan berbasis teknologi.</span>
               </p>
               <div class="timeline__footer">
                 <div class="timeline__badge">
                   <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
-                  Lulus
+                  <span data-i18n="edu.sdn.badge">Lulus</span>
                 </div>
                 <a href="https://maps.app.goo.gl/aDLsZaMLXk8psEy76?g_st=ac"
                    target="_blank" rel="noopener noreferrer"
@@ -463,12 +449,11 @@
               </div>
             </div>
             <div class="timeline__card timeline__card--active">
-              <div class="timeline__period">2024 — Sekarang</div>
-              <h3 class="timeline__school">SMK Negeri 20 Jakarta</h3>
-              <p class="timeline__level">Rekayasa Perangkat Lunak (RPL)</p>
+              <div class="timeline__period" data-i18n="edu.smk.period">2024 — Sekarang</div>
+              <h3 class="timeline__school" data-i18n="edu.smk.name">SMK Negeri 20 Jakarta</h3>
+              <p class="timeline__level" data-i18n="edu.smk.level">Rekayasa Perangkat Lunak (RPL)</p>
               <p class="timeline__detail">
-                Menempuh pendidikan di jurusan Rekayasa Perangkat Lunak, mempelajari pengembangan web,
-                pemrograman, basis data, dan software engineering secara intensif.
+                <span data-i18n="edu.smk.detail">Menempuh pendidikan di jurusan Rekayasa Perangkat Lunak, mempelajari pengembangan web, pemrograman, basis data, dan software engineering secara intensif.</span>
               </p>
               <div class="timeline__footer">
                 <div class="timeline__badge timeline__badge--active">
@@ -490,18 +475,16 @@
       </div>
     </section>
 
-
     <!-- =========================================
          SECTION KONTAK
     ========================================== -->
     <section class="contact section" id="kontak" aria-label="Kontak">
       <div class="container">
         <div class="section-header animate-on-scroll">
-          <span class="section-eyebrow">Get In Touch</span>
-          <h2 class="section-title">Hubungi Saya</h2>
+          <span class="section-eyebrow" data-i18n="contact.eyebrow">Get In Touch</span>
+          <h2 class="section-title" data-i18n="contact.title">Hubungi Saya</h2>
           <p class="section-desc">
-            Jangan ragu untuk menghubungi saya. Saya terbuka untuk diskusi project,
-            kolaborasi, maupun pertanyaan seputar pengembangan web.
+            <span data-i18n="contact.desc">Jangan ragu untuk menghubungi saya. Saya terbuka untuk diskusi project, kolaborasi, maupun pertanyaan seputar pengembangan web.</span>
           </p>
         </div>
 
@@ -564,23 +547,23 @@
           <div class="contact__form-wrap animate-on-scroll" style="--delay:.1s">
             <form class="contact-form" id="contactForm" novalidate>
               <div class="form-group">
-                <label for="fullName" class="form-label">Nama Lengkap <span class="required"
+                <label for="fullName" class="form-label"><span data-i18n="contact.form.name.label">Nama Lengkap</span> <span class="required"
                     aria-hidden="true">*</span></label>
                 <input type="text" id="fullName" name="fullName" class="form-input"
-                  placeholder="Masukkan nama lengkap Anda" autocomplete="name" aria-required="true" />
+                  placeholder="Masukkan nama lengkap Anda" data-i18n-placeholder="contact.form.name.placeholder" autocomplete="name" aria-required="true" />
                 <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
               </div>
 
               <div class="form-group">
-                <label for="message" class="form-label">Pesan <span class="required" aria-hidden="true">*</span></label>
+                <label for="message" class="form-label"><span data-i18n="contact.form.msg.label">Pesan</span> <span class="required" aria-hidden="true">*</span></label>
                 <textarea id="message" name="message" class="form-input form-textarea"
-                  placeholder="Tulis pesan Anda di sini..." rows="6" aria-required="true"></textarea>
+                  placeholder="Tulis pesan Anda di sini..." data-i18n-placeholder="contact.form.msg.placeholder" rows="6" aria-required="true"></textarea>
                 <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
               </div>
 
               <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
                 <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-                Kirim Pesan
+                <span data-i18n="contact.form.submit">Kirim Pesan</span>
               </button>
 
               <div class="form-notice" id="formNotice" role="status" aria-live="polite" aria-atomic="true"></div>
@@ -594,14 +577,14 @@
           <div class="message-list-header">
             <h3 class="message-list-title">
               <i class="fa-solid fa-inbox" aria-hidden="true"></i>
-              Pesan Masuk
+              <span data-i18n="contact.inbox.title">Pesan Masuk</span>
             </h3>
             <span class="message-count" id="messageCount">0 pesan</span>
           </div>
           <div id="messageList" class="message-list" aria-live="polite" aria-label="Daftar pesan masuk"></div>
           <div class="message-empty" id="messageEmpty">
             <i class="fa-solid fa-inbox" aria-hidden="true"></i>
-            <p>Belum ada pesan yang masuk.</p>
+            <p data-i18n="contact.empty">Belum ada pesan yang masuk.</p>
           </div>
         </div>
 
@@ -624,25 +607,25 @@
               dev</span>
             <span class="logo-version">[2.0]</span>
           </a>
-          <p class="footer__tagline">Hafiizh Maulana</p>
-          <p class="footer__subtitle">RPL Student &amp; Junior Web Developer</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Hafiizh Maulana</p>
+          <p class="footer__subtitle" data-i18n="footer.subtitle">RPL Student &amp; Junior Web Developer</p>
         </div>
 
         <!-- Footer Nav -->
         <nav class="footer__nav" aria-label="Footer navigasi">
-          <h4 class="footer__nav-title">Navigasi</h4>
+          <h4 class="footer__nav-title" data-i18n="footer.nav.title">Navigasi</h4>
           <ul class="footer__nav-list">
-            <li><a href="#tentang" class="footer__nav-link">Tentang</a></li>
-            <li><a href="#keahlian" class="footer__nav-link">Keahlian</a></li>
-            <li><a href="#project" class="footer__nav-link">Project</a></li>
-            <li><a href="#riwayat" class="footer__nav-link">Riwayat</a></li>
-            <li><a href="#kontak" class="footer__nav-link">Kontak</a></li>
+            <li><a href="#tentang" class="footer__nav-link" data-i18n="nav.tentang">Tentang</a></li>
+            <li><a href="#keahlian" class="footer__nav-link" data-i18n="nav.keahlian">Keahlian</a></li>
+            <li><a href="#project" class="footer__nav-link" data-i18n="nav.project">Project</a></li>
+            <li><a href="#riwayat" class="footer__nav-link" data-i18n="nav.riwayat">Riwayat</a></li>
+            <li><a href="#kontak" class="footer__nav-link" data-i18n="nav.kontak">Kontak</a></li>
           </ul>
         </nav>
 
         <!-- Social -->
         <div class="footer__social">
-          <h4 class="footer__nav-title">Social Media</h4>
+          <h4 class="footer__nav-title" data-i18n="footer.social.title">Social Media</h4>
           <div class="footer__social-links">
             <a href="mailto:hafiizmln22309@gmail.com" class="footer__social-link" aria-label="Email">
               <i class="fa-solid fa-envelope" aria-hidden="true"></i>
@@ -680,7 +663,18 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/contact.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+

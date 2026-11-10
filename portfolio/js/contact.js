@@ -1,4 +1,4 @@
-/**
+﻿/**
  * contact.js - mauLportofolio.dev 2.0
  * Author : Hafiizh Maulana
  * Handles: Contact form (nama + pesan), localStorage message board,
@@ -65,7 +65,7 @@ function renderMessages() {
 
   if (messageCount) {
     const n = msgs.length;
-    messageCount.textContent = n === 0 ? '0 pesan' : n + ' pesan';
+    const countTpl = (typeof window.i18n !== 'undefined') ? window.i18n.t('contact.inbox.count').replace('{n}', n) : n + ' pesan'; messageCount.textContent = countTpl;
   }
 
   if (messageEmpty) {
@@ -124,7 +124,7 @@ function deleteMessage(id) {
   saveMessages(msgs);
   renderMessages();
   if (typeof window.showToast === 'function') {
-    window.showToast('Pesan berhasil dihapus.');
+    window.showToast(typeof window.i18n !== 'undefined' ? window.i18n.t('contact.toast.deleted') : 'Pesan berhasil dihapus.');
   }
 }
 
@@ -141,11 +141,11 @@ function validateField(key) {
   clearFieldError(key);
 
   if (isEmpty(value)) {
-    setFieldError(key, label + ' tidak boleh kosong.');
+    const emptyKey = key === 'fullName' ? 'contact.validate.name.empty' : 'contact.validate.msg.empty'; setFieldError(key, typeof window.i18n !== 'undefined' ? window.i18n.t(emptyKey) : label + ' tidak boleh kosong.');
     return false;
   }
   if (key === 'message' && value.trim().length < 5) {
-    setFieldError(key, 'Pesan minimal 5 karakter.');
+    setFieldError(key, typeof window.i18n !== 'undefined' ? window.i18n.t('contact.validate.msg.short') : 'Pesan minimal 5 karakter.');
     return false;
   }
   setFieldSuccess(key);
@@ -207,7 +207,7 @@ contactForm.addEventListener('submit', function (e) {
         break;
       }
     }
-    showFormNotice('Mohon periksa kembali isian formulir Anda.', 'error');
+    showFormNotice(typeof window.i18n !== 'undefined' ? window.i18n.t('contact.validate.general') : 'Mohon periksa kembali isian formulir Anda.', 'error');
     return;
   }
 
@@ -224,10 +224,10 @@ contactForm.addEventListener('submit', function (e) {
   saveMessages(msgs);
   renderMessages();
 
-  showFormNotice('Pesan berhasil dikirim! Terima kasih, ' + name + '.', 'success');
+  const _sm = typeof window.i18n !== 'undefined' ? window.i18n.t('contact.form.success').replace('{name}', name) : 'Pesan berhasil dikirim! Terima kasih, ' + name + '.'; showFormNotice(_sm, 'success');
 
   if (typeof window.showToast === 'function') {
-    window.showToast('Pesan berhasil dikirim!');
+    window.showToast(typeof window.i18n !== 'undefined' ? window.i18n.t('contact.toast.sent') : 'Pesan berhasil dikirim!');
   }
 
   setButtonLoading(true);
@@ -298,6 +298,15 @@ function hideFormNotice() {
       : 'var(--clr-text-dim)';
   });
 })();
+
+/* --------------------------------------------------
+   Locale Update
+-------------------------------------------------- */
+window.contactLocaleUpdate = function (locale) {
+  fields.fullName.label = typeof window.i18n !== 'undefined' ? window.i18n.t('contact.form.name.label') : (locale === 'en' ? 'Full Name' : 'Nama Lengkap');
+  fields.message.label = typeof window.i18n !== 'undefined' ? window.i18n.t('contact.form.msg.label') : (locale === 'en' ? 'Message' : 'Pesan');
+  renderMessages();
+};
 
 /* --------------------------------------------------
    Init
